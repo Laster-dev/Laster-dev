@@ -10,6 +10,46 @@ Welcome to my GitHub profile! I'm a passionate developer with a keen interest in
 ## 🛠️ Languages and Tools
 - **Languages:** Python, C#, C++
 
+## 🔬 Featured Project: Minimal Windows Shellcode Loader
+
+This repository contains a highly optimized, minimal Windows shellcode loader with the following characteristics:
+
+### ✨ Key Features
+- **Ultra-minimal size**: Only 2KB (2048 bytes) executable
+- **Pure Windows API**: No C runtime library dependencies
+- **HTTP/HTTPS download**: Fetches shellcode from any URL
+- **Memory execution**: Allocates and executes in-memory payloads
+- **Cross-platform build**: Supports both 32-bit and 64-bit architectures
+
+### 🏗️ Technical Highlights
+- Uses `WinMainCRTStartup()` custom entry point to avoid CRT
+- Implements HTTP client using WinINet API
+- Dynamic memory management with `VirtualAlloc()`
+- Proper memory protection transitions (RW → RX)
+- Aggressive compiler optimizations for size reduction
+
+### 📊 Build Results
+```
+Binary Size: 2048 bytes (2KB)
+Format: PE32/PE32+ Windows executable
+Dependencies: kernel32.dll, wininet.dll only
+CRT Dependency: None
+```
+
+### 🔧 Quick Build
+```bash
+# 64-bit version
+make x64
+
+# 32-bit version  
+make mingw
+
+# Size comparison
+make size
+```
+
+For detailed technical documentation, see [TECHNICAL_DETAILS.md](TECHNICAL_DETAILS.md) and [SHELLCODE_LOADER_README.md](SHELLCODE_LOADER_README.md).
+
 ## 📈 GitHub Stats
 ![Laster-dev's GitHub stats](https://github-readme-stats.vercel.app/api?username=Laster-dev&show_icons=true&theme=radical)
 

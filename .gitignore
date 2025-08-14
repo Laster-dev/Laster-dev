@@ -1,0 +1,24 @@
+# Compiled binaries
+*.exe
+*.dll
+*.pdb
+*.obj
+*.o
+
+# Build artifacts
+*.bin
+test_shellcode.*
+
+# IDE files
+.vs/
+*.vcxproj.user
+*.vcxproj.filters
+
+# Temporary files
+*~
+*.tmp
+*.temp
+
+# Test files
+payload.*
+shellcode.*
